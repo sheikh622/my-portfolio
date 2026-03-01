@@ -15,7 +15,6 @@ import {
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 
@@ -25,12 +24,6 @@ const contactInfo = [
         label: 'Email',
         value: 'arslansaleem622@gmail.com',
         href: 'mailto:arslansaleem622@gmail.com',
-    },
-    {
-        icon: <PhoneIcon sx={{ color: '#67e8f9' }} />,
-        label: 'Phone',
-        value: '+92 302-4978464',
-        href: 'tel:+923024978464',
     },
     {
         icon: <LocationOnIcon sx={{ color: '#34d399' }} />,

@@ -12,7 +12,6 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
 
 const socialLinks = [
     {
@@ -29,11 +28,6 @@ const socialLinks = [
         icon: <EmailIcon />,
         href: 'mailto:arslansaleem622@gmail.com',
         label: 'Email',
-    },
-    {
-        icon: <PhoneIcon />,
-        href: 'tel:+923024978464',
-        label: 'Phone',
     },
 ];
 
