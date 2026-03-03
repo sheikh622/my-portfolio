@@ -293,24 +293,6 @@ export default function Projects() {
 
                                 <CardActions sx={{ px: 2, pb: 2, pt: 0, gap: 1 }}>
                                     <Button
-                                        id={`${project.id}-github`}
-                                        size="small"
-                                        startIcon={<GitHubIcon />}
-                                        href="https://github.com/sheikh622"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        sx={{
-                                            color: 'text.secondary',
-                                            fontWeight: 600,
-                                            '&:hover': {
-                                                color: 'text.primary',
-                                                background: 'rgba(255,255,255,0.04)',
-                                            },
-                                        }}
-                                    >
-                                        Code
-                                    </Button>
-                                    <Button
                                         id={`${project.id}-details`}
                                         size="small"
                                         variant="contained"

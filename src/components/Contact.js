@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import {
     Box,
     Container,
@@ -45,7 +46,12 @@ const socialLinks = [
     { icon: <EmailIcon />, href: 'mailto:arslansaleem622@gmail.com', label: 'Email', color: '#a78bfa' },
 ];
 
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
 export default function Contact() {
+    const formRef = useRef(null);
     const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
     const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
     const [loading, setLoading] = useState(false);
@@ -59,11 +65,17 @@ export default function Contact() {
             return;
         }
         setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            setSnackbar({ open: true, message: "Message sent! I'll get back to you soon 🚀", severity: 'success' });
-        }, 1500);
+        emailjs
+            .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, { publicKey: EMAILJS_PUBLIC_KEY })
+            .then(() => {
+                setLoading(false);
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                setSnackbar({ open: true, message: "Message sent! I'll get back to you soon 🚀", severity: 'success' });
+            })
+            .catch(() => {
+                setLoading(false);
+                setSnackbar({ open: true, message: 'Oops! Something went wrong. Please try again.', severity: 'error' });
+            });
     };
 
     const inputSx = {
@@ -154,7 +166,7 @@ export default function Contact() {
 
                     <Grid item xs={12} md={8}>
                         <Card sx={{ p: { xs: 3, md: 5 } }}>
-                            <form onSubmit={handleSubmit} noValidate>
+                            <form ref={formRef} onSubmit={handleSubmit} noValidate>
                                 <Grid container spacing={2.5}>
                                     <Grid item xs={12} sm={6}>
                                         <TextField id="contact-name" label="Your Name *" name="name" fullWidth value={formData.name} onChange={handleChange} sx={inputSx} />
