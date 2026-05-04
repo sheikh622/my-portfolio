@@ -33,19 +33,19 @@ export default function Footer() {
     const handleScrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
     return (
-        <Box component="footer" sx={{ background: 'rgba(10, 10, 15, 0.97)', borderTop: '1px solid rgba(124, 58, 237, 0.12)', pt: 8, pb: 4, position: 'relative' }}>
+        <Box component="footer" sx={{ background: 'rgba(11, 15, 26, 0.97)', borderTop: '1px solid rgba(59, 130, 246, 0.15)', pt: 8, pb: 4, position: 'relative' }}>
             <Box sx={{ position: 'absolute', top: -22, left: '50%', transform: 'translateX(-50%)' }}>
                 <IconButton
                     id="footer-scroll-top"
                     onClick={handleScrollTop}
                     aria-label="Scroll to top"
                     sx={{
-                        background: 'linear-gradient(135deg, #7c3aed, #a855f7)',
+                        background: 'linear-gradient(135deg, #3b82f6, #10b981)',
                         color: '#fff',
-                        boxShadow: '0 4px 20px rgba(124, 58, 237, 0.5)',
+                        boxShadow: '0 4px 20px rgba(59, 130, 246, 0.5)',
                         width: 44,
                         height: 44,
-                        '&:hover': { background: 'linear-gradient(135deg, #6d28d9, #9333ea)', transform: 'translateY(-3px)', boxShadow: '0 6px 24px rgba(124, 58, 237, 0.65)' },
+                        '&:hover': { background: 'linear-gradient(135deg, #2563eb, #059669)', transform: 'translateY(-3px)', boxShadow: '0 6px 24px rgba(16, 185, 129, 0.65)' },
                         transition: 'all 0.3s ease',
                     }}
                 >
@@ -57,18 +57,18 @@ export default function Footer() {
                 <Grid container spacing={4} sx={{ mb: 6 }}>
                     <Grid item xs={12} md={5}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-                            <Box sx={{ width: 36, height: 36, borderRadius: '10px', background: 'linear-gradient(135deg, #7c3aed, #a855f7)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Box sx={{ width: 36, height: 36, borderRadius: '10px', background: 'linear-gradient(135deg, #3b82f6, #10b981)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <CodeIcon sx={{ fontSize: 20, color: '#fff' }} />
                             </Box>
                             <Typography
                                 variant="h6"
-                                sx={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 700, background: 'linear-gradient(90deg, #a78bfa, #67e8f9)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+                                sx={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 700, background: 'linear-gradient(90deg, #60a5fa, #34d399)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
                             >
                                 Muhammad Arslan
                             </Typography>
                         </Box>
                         <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.8, maxWidth: 320 }}>
-                            Senior React Developer & Frontend Engineer building scalable, high-performance web applications with React.js, Next.js, and TypeScript.
+                            Senior Software Engineer & Full Stack Developer building production-ready web platforms end-to-end with React, Next.js, Node.js, and AWS.
                         </Typography>
                     </Grid>
 
@@ -86,7 +86,7 @@ export default function Footer() {
                                         e.preventDefault();
                                         document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                     }}
-                                    sx={{ color: 'text.secondary', justifyContent: 'flex-start', p: 0, minWidth: 0, fontWeight: 500, '&:hover': { color: 'primary.light', background: 'transparent' } }}
+                                    sx={{ color: 'text.secondary', justifyContent: 'flex-start', p: 0, minWidth: 0, fontWeight: 500, '&:hover': { color: '#34d399', background: 'transparent' } }}
                                 >
                                     {link.label}
                                 </Button>
@@ -109,7 +109,7 @@ export default function Footer() {
                                     aria-label={social.label}
                                     sx={{
                                         color: 'text.secondary', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', transition: 'all 0.3s ease',
-                                        '&:hover': { color: 'primary.light', borderColor: 'rgba(124, 58, 237, 0.4)', background: 'rgba(124, 58, 237, 0.1)', transform: 'translateY(-3px)' },
+                                        '&:hover': { color: 'primary.light', borderColor: 'rgba(59, 130, 246, 0.45)', background: 'rgba(59, 130, 246, 0.1)', transform: 'translateY(-3px)' },
                                     }}
                                 >
                                     {social.icon}

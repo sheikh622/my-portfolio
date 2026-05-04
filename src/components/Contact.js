@@ -21,7 +21,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 const contactInfo = [
     {
-        icon: <EmailIcon sx={{ color: '#a78bfa' }} />,
+        icon: <EmailIcon sx={{ color: '#60a5fa' }} />,
         label: 'Email',
         value: 'arslansaleem622@gmail.com',
         href: 'mailto:arslansaleem622@gmail.com',
@@ -43,7 +43,7 @@ const contactInfo = [
 const socialLinks = [
     { icon: <GitHubIcon />, href: 'https://github.com/sheikh622', label: 'GitHub', color: '#e2e8f0' },
     { icon: <LinkedInIcon />, href: 'https://linkedin.com/in/muhammad-arslan-0624971b5', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: <EmailIcon />, href: 'mailto:arslansaleem622@gmail.com', label: 'Email', color: '#a78bfa' },
+    { icon: <EmailIcon />, href: 'mailto:arslansaleem622@gmail.com', label: 'Email', color: '#60a5fa' },
 ];
 
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -83,8 +83,8 @@ export default function Contact() {
             background: 'rgba(255,255,255,0.03)',
             borderRadius: '12px',
             '& fieldset': { borderColor: 'rgba(255,255,255,0.08)' },
-            '&:hover fieldset': { borderColor: 'rgba(124, 58, 237, 0.35)' },
-            '&.Mui-focused fieldset': { borderColor: '#7c3aed' },
+            '&:hover fieldset': { borderColor: 'rgba(59, 130, 246, 0.35)' },
+            '&.Mui-focused fieldset': { borderColor: '#3b82f6' },
         },
         '& .MuiInputLabel-root': { color: 'text.secondary' },
         '& .MuiInputLabel-root.Mui-focused': { color: 'primary.light' },
@@ -96,7 +96,7 @@ export default function Contact() {
             <Box sx={{
                 position: 'absolute', bottom: '-10%', left: '50%', transform: 'translateX(-50%)',
                 width: '70%', height: '50%',
-                background: 'radial-gradient(ellipse, rgba(124, 58, 237, 0.07) 0%, transparent 70%)',
+                background: 'radial-gradient(ellipse, rgba(59, 130, 246, 0.07) 0%, transparent 70%)',
                 pointerEvents: 'none',
             }} />
 
@@ -107,13 +107,13 @@ export default function Contact() {
                     </Typography>
                     <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '3rem' }, fontWeight: 800, mb: 2 }}>
                         Let's{' '}
-                        <Box component="span" sx={{ background: 'linear-gradient(135deg, #a78bfa, #67e8f9)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                        <Box component="span" sx={{ background: 'linear-gradient(135deg, #60a5fa, #34d399)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             Work Together
                         </Box>
                     </Typography>
-                    <Box sx={{ width: 64, height: 4, borderRadius: 2, background: 'linear-gradient(90deg, #7c3aed, #06b6d4)', mx: 'auto', mb: 2 }} />
+                    <Box sx={{ width: 72, height: 4, borderRadius: 2, background: 'linear-gradient(90deg, #3b82f6, #10b981)', mx: 'auto', mb: 2 }} />
                     <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 540, mx: 'auto', lineHeight: 1.8 }}>
-                        Looking for a Senior React Developer who delivers clean, structured, and production-ready solutions? Let's build something impactful together.
+                        Looking for a Senior Software Engineer who ships full-stack products end-to-end — clean, scalable, and production-ready? Let's build something impactful together.
                     </Typography>
                 </Box>
 
@@ -129,7 +129,7 @@ export default function Contact() {
                                     rel={info.href && !info.href.startsWith('mailto') && !info.href.startsWith('tel') ? 'noopener noreferrer' : undefined}
                                     sx={{ p: 2.5, display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'none', cursor: info.href ? 'pointer' : 'default' }}
                                 >
-                                    <Box sx={{ width: 44, height: 44, borderRadius: '12px', background: 'rgba(124, 58, 237, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                                    <Box sx={{ width: 44, height: 44, borderRadius: '12px', background: 'rgba(59, 130, 246, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                                         {info.icon}
                                     </Box>
                                     <Box sx={{ overflow: 'hidden' }}>

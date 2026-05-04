@@ -15,36 +15,36 @@ const experiences = [
         type: 'work',
         company: 'Devflovv',
         location: 'Lahore, Pakistan',
-        role: 'Software Engineer (Frontend) / Team Lead',
+        role: 'Senior Software Engineer / Team Lead',
         period: 'May 2023 – Present',
         current: true,
-        color: '#7c3aed',
+        color: '#3b82f6',
         highlights: [
-            'Develop and maintain scalable frontend applications using React.js, Next.js, and TypeScript.',
-            'Lead frontend architecture, ensuring reusable components and maintainable codebases across projects.',
-            'Integrate backend services including Neo4j and Parse for dynamic, data-driven applications.',
-            'Collaborate with UX/UI designers to convert wireframes into functional, responsive interfaces.',
-            'Drive sprint planning, code reviews, and Agile ceremonies as the frontend team lead.',
+            'Architect and ship full-stack applications end-to-end using React, Next.js, TypeScript on the frontend and Node.js / Express APIs on the backend.',
+            'Design and integrate REST and GraphQL services backed by MongoDB, PostgreSQL, and Neo4j; build real-time features with WebSockets.',
+            'Lead frontend and full-stack architecture decisions — reusable component systems, shared types, and maintainable codebases across multiple products.',
+            'Deploy and operate production workloads on AWS and Vercel, with Docker for local parity and CI/CD pipelines for safe releases.',
+            'Drive sprint planning, code reviews, and Agile ceremonies as team lead, mentoring engineers and partnering closely with UX/UI designers.',
         ],
-        tags: ['React.js', 'Next.js', 'TypeScript', 'Neo4j', 'Parse', 'Agile'],
+        tags: ['React.js', 'Next.js', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'AWS', 'Docker'],
     },
     {
         id: 'exp-argonteq',
         type: 'work',
         company: 'ArgonTeq',
         location: 'Arfa Karim Technology Park, Lahore',
-        role: 'React.js Developer',
+        role: 'Software Engineer (Full Stack)',
         period: 'August 2021 – May 2023',
         current: false,
-        color: '#06b6d4',
+        color: '#10b981',
         highlights: [
-            'Built responsive and interactive user interfaces using React.js for diverse client projects.',
-            'Integrated RESTful APIs, GraphQL endpoints, and WebSocket services for real-time features.',
-            'Managed complex application state using Redux, Context API, and Zustand.',
-            'Debugged production issues and implemented performance optimizations across the stack.',
-            'Collaborated closely with backend teams to ensure seamless frontend-backend integration.',
+            'Built responsive, interactive interfaces with React.js for diverse client products across multiple domains.',
+            'Developed and consumed REST APIs, GraphQL endpoints, and WebSocket services — wiring up real-time features end-to-end.',
+            'Managed complex application state using Redux, Redux Saga, Context API, and Zustand.',
+            'Worked across the stack on Node.js services, debugged production issues, and shipped performance optimizations.',
+            'Collaborated closely with backend teams to ensure clean contracts and seamless integration on every release.',
         ],
-        tags: ['React.js', 'REST APIs', 'GraphQL', 'WebSockets', 'Redux', 'Zustand'],
+        tags: ['React.js', 'Node.js', 'REST APIs', 'GraphQL', 'WebSockets', 'Redux', 'Zustand'],
     },
     {
         id: 'edu-uol',
@@ -54,7 +54,7 @@ const experiences = [
         role: 'Bachelor of Science in Software Engineering',
         period: 'September 2017 – August 2021',
         current: false,
-        color: '#f59e0b',
+        color: '#fbbf24',
         highlights: [
             'Completed a four-year degree in Software Engineering with focus on web technologies and system design.',
             'Built foundational skills in algorithms, data structures, object-oriented programming, and software architecture.',
@@ -71,7 +71,7 @@ export default function Experience() {
                 py: { xs: 10, md: 14 },
                 position: 'relative',
                 overflow: 'hidden',
-                background: 'linear-gradient(180deg, transparent 0%, rgba(124, 58, 237, 0.03) 50%, transparent 100%)',
+                background: 'linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.04) 50%, transparent 100%)',
             }}
         >
             <Box
@@ -81,7 +81,7 @@ export default function Experience() {
                     right: '-10%',
                     width: '35%',
                     height: '60%',
-                    background: 'radial-gradient(ellipse, rgba(124, 58, 237, 0.08) 0%, transparent 70%)',
+                    background: 'radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%)',
                     pointerEvents: 'none',
                 }}
             />
@@ -89,16 +89,16 @@ export default function Experience() {
             <Container maxWidth="lg">
                 {/* Section Header */}
                 <Box sx={{ textAlign: 'center', mb: 8 }}>
-                    <Typography variant="overline" sx={{ color: 'primary.light', letterSpacing: '0.15em', fontWeight: 600, mb: 1, display: 'block' }}>
+                    <Typography variant="overline" sx={{ color: 'primary.light', letterSpacing: '0.18em', fontWeight: 600, mb: 1, display: 'block' }}>
                         My Journey
                     </Typography>
                     <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '3rem' }, fontWeight: 800, mb: 2 }}>
                         Experience &{' '}
-                        <Box component="span" sx={{ background: 'linear-gradient(135deg, #a78bfa, #67e8f9)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                        <Box component="span" sx={{ background: 'linear-gradient(135deg, #60a5fa, #34d399)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             Education
                         </Box>
                     </Typography>
-                    <Box sx={{ width: 64, height: 4, borderRadius: 2, background: 'linear-gradient(90deg, #7c3aed, #06b6d4)', mx: 'auto' }} />
+                    <Box sx={{ width: 72, height: 4, borderRadius: 2, background: 'linear-gradient(90deg, #3b82f6, #10b981)', mx: 'auto' }} />
                 </Box>
 
                 {/* Timeline */}
@@ -111,7 +111,7 @@ export default function Experience() {
                             top: 0,
                             bottom: 0,
                             width: 2,
-                            background: 'linear-gradient(180deg, #7c3aed, #06b6d4, rgba(124,58,237,0.1))',
+                            background: 'linear-gradient(180deg, #3b82f6, #10b981, rgba(59, 130, 246, 0.1))',
                             borderRadius: 1,
                         }}
                     />
@@ -146,8 +146,8 @@ export default function Experience() {
                                             alignItems: 'center',
                                             justifyContent: 'center',
                                             boxShadow: '0 0 16px ' + exp.color + '33',
-                                            transition: 'all 0.3s ease',
-                                            '&:hover': { boxShadow: '0 0 24px ' + exp.color + '66', transform: 'scale(1.08)' },
+                                            transition: 'all 0.35s ease',
+                                            '&:hover': { boxShadow: '0 0 28px ' + exp.color + '77', transform: 'scale(1.1)' },
                                         }}
                                     >
                                         {exp.type === 'work'
@@ -161,16 +161,16 @@ export default function Experience() {
                                 <Box
                                     sx={{
                                         flex: 1,
-                                        background: 'rgba(19, 19, 26, 0.8)',
+                                        background: 'rgba(17, 24, 39, 0.7)',
                                         backdropFilter: 'blur(16px)',
-                                        border: '1px solid rgba(124, 58, 237, 0.1)',
+                                        border: '1px solid rgba(59, 130, 246, 0.1)',
                                         borderRadius: 3,
                                         p: { xs: 2.5, md: 3.5 },
-                                        transition: 'all 0.3s ease',
+                                        transition: 'all 0.35s ease',
                                         '&:hover': {
-                                            border: '1px solid ' + exp.color + '44',
-                                            boxShadow: '0 12px 40px ' + exp.color + '18',
-                                            transform: 'translateX(4px)',
+                                            border: '1px solid ' + exp.color + '55',
+                                            boxShadow: '0 16px 48px ' + exp.color + '22',
+                                            transform: 'translateX(6px)',
                                         },
                                     }}
                                 >

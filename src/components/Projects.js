@@ -24,55 +24,55 @@ const projects = [
         id: 'project-lamppost',
         title: 'Lamppost',
         description:
-            'An education management platform with role-based access for principals and teachers. Features include onboarding via email invitations, assessment creation, lesson planning, unit planning, and deep integration with Google Calendar and Gmail APIs.',
-        tags: ['React.js', 'TypeScript', 'Redux', 'Google APIs', 'RBAC'],
+            'A full-stack education management platform with role-based access for principals and teachers. Features include onboarding via email invitations, assessment creation, lesson and unit planning, and deep integration with Google Calendar and Gmail APIs.',
+        tags: ['React.js', 'TypeScript', 'Node.js', 'MongoDB', 'Google APIs', 'RBAC'],
         category: 'Education',
-        gradient: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-        role: 'Team Lead / Senior Frontend Developer',
+        gradient: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)',
+        role: 'Senior Software Engineer / Team Lead',
         featured: true,
     },
     {
         id: 'project-tabshura',
         title: 'Tabshura',
         description:
-            'A comprehensive education management system built for teachers, students, and parents — streamlining academic workflows, progress tracking, and communication across all school stakeholders.',
-        tags: ['React.js', 'TypeScript', 'REST APIs', 'Material UI'],
+            'A comprehensive education management system for teachers, students, and parents — streamlining academic workflows, progress tracking, and communication across all school stakeholders. Built end-to-end with React, Node.js, and PostgreSQL.',
+        tags: ['React.js', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'REST APIs'],
         category: 'Education',
-        gradient: 'linear-gradient(135deg, #0ea5e9 0%, #67e8f9 100%)',
-        role: 'Frontend Developer',
+        gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 100%)',
+        role: 'Full Stack Developer',
         featured: true,
     },
     {
         id: 'project-living-ai',
         title: 'Living-AI',
         description:
-            'A scalable AI-driven frontend application built with React.js and TypeScript. Focused on optimized component performance, strict code reusability, and a clean, maintainable architecture to support AI-powered features.',
-        tags: ['React.js', 'TypeScript', 'AI Integration', 'Performance'],
+            'A scalable AI-driven full-stack application built with React, TypeScript, and Node.js. Focused on optimized component performance, strict code reusability, and a clean, maintainable architecture supporting AI-powered features and real-time inference.',
+        tags: ['React.js', 'TypeScript', 'Node.js', 'AI Integration', 'WebSockets'],
         category: 'AI / Tech',
-        gradient: 'linear-gradient(135deg, #059669 0%, #34d399 100%)',
-        role: 'Frontend Developer',
+        gradient: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)',
+        role: 'Full Stack Developer',
         featured: false,
     },
     {
         id: 'project-thdc',
         title: 'Total Health Dental Care',
         description:
-            'A patient management system featuring online appointment booking, enhanced admin workflows, and an improved overall user experience for healthcare staff and patients.',
-        tags: ['React.js', 'REST APIs', 'Redux', 'Bootstrap'],
+            'A patient management system featuring online appointment booking, enhanced admin workflows, and an improved overall user experience for healthcare staff and patients. Includes secure REST APIs and role-based access control.',
+        tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
         category: 'Healthcare',
-        gradient: 'linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)',
-        role: 'Frontend Developer',
+        gradient: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
+        role: 'Full Stack Developer',
         featured: false,
     },
     {
         id: 'project-joblinxs',
         title: 'Joblinxs',
         description:
-            'A freelance marketplace platform inspired by Upwork, enabling seamless interactions between clients and service providers through responsive UI components, dynamic listings, and real-time communication features.',
-        tags: ['React.js', 'Redux', 'WebSockets', 'REST APIs'],
+            'A freelance marketplace platform inspired by Upwork, enabling seamless interactions between clients and service providers through responsive UI components, dynamic listings, and real-time chat powered by WebSockets.',
+        tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'WebSockets', 'Redux'],
         category: 'Marketplace',
-        gradient: 'linear-gradient(135deg, #db2777 0%, #f472b6 100%)',
-        role: 'Frontend Developer',
+        gradient: 'linear-gradient(135deg, #ec4899 0%, #f472b6 100%)',
+        role: 'Full Stack Developer',
         featured: false,
     },
 ];
@@ -91,7 +91,7 @@ export default function Projects() {
             sx={{
                 py: { xs: 10, md: 14 },
                 background:
-                    'linear-gradient(180deg, transparent 0%, rgba(124, 58, 237, 0.03) 50%, transparent 100%)',
+                    'linear-gradient(180deg, transparent 0%, rgba(16, 185, 129, 0.04) 50%, transparent 100%)',
                 position: 'relative',
                 overflow: 'hidden',
             }}
@@ -103,7 +103,18 @@ export default function Projects() {
                     left: '-8%',
                     width: '30%',
                     height: '40%',
-                    background: 'radial-gradient(ellipse, rgba(124, 58, 237, 0.08) 0%, transparent 70%)',
+                    background: 'radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%)',
+                    pointerEvents: 'none',
+                }}
+            />
+            <Box
+                sx={{
+                    position: 'absolute',
+                    bottom: '10%',
+                    right: '-8%',
+                    width: '30%',
+                    height: '40%',
+                    background: 'radial-gradient(ellipse, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
                     pointerEvents: 'none',
                 }}
             />
@@ -115,7 +126,7 @@ export default function Projects() {
                         variant="overline"
                         sx={{
                             color: 'primary.light',
-                            letterSpacing: '0.15em',
+                            letterSpacing: '0.18em',
                             fontWeight: 600,
                             mb: 1,
                             display: 'block',
@@ -131,7 +142,7 @@ export default function Projects() {
                         <Box
                             component="span"
                             sx={{
-                                background: 'linear-gradient(135deg, #a78bfa, #67e8f9)',
+                                background: 'linear-gradient(135deg, #60a5fa, #34d399)',
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -142,16 +153,15 @@ export default function Projects() {
                     </Typography>
                     <Box
                         sx={{
-                            width: 64,
+                            width: 72,
                             height: 4,
                             borderRadius: 2,
-                            background: 'linear-gradient(90deg, #7c3aed, #06b6d4)',
+                            background: 'linear-gradient(90deg, #3b82f6, #10b981)',
                             mx: 'auto',
                             mb: 4,
                         }}
                     />
 
-                    {/* Category Tabs */}
                     <Tabs
                         value={activeTab}
                         onChange={(_, v) => setActiveTab(v)}
@@ -165,9 +175,9 @@ export default function Projects() {
                                 textTransform: 'none',
                                 minWidth: 80,
                             },
-                            '& .Mui-selected': { color: 'primary.light' },
+                            '& .Mui-selected': { color: '#34d399' },
                             '& .MuiTabs-indicator': {
-                                background: 'linear-gradient(90deg, #7c3aed, #a855f7)',
+                                background: 'linear-gradient(90deg, #3b82f6, #10b981)',
                                 borderRadius: 2,
                                 height: 3,
                             },
@@ -197,15 +207,13 @@ export default function Projects() {
                                     overflow: 'hidden',
                                 }}
                             >
-                                {/* Top gradient bar */}
                                 <Box sx={{ height: 4, background: project.gradient }} />
 
-                                {/* Subtle gradient overlay */}
                                 <Box
                                     sx={{
                                         height: 120,
                                         background: project.gradient,
-                                        opacity: 0.1,
+                                        opacity: 0.12,
                                         position: 'absolute',
                                         top: 0,
                                         left: 0,
@@ -234,9 +242,9 @@ export default function Projects() {
                                                     size="small"
                                                     icon={<StarIcon sx={{ fontSize: '12px !important' }} />}
                                                     sx={{
-                                                        background: 'rgba(124, 58, 237, 0.15)',
-                                                        border: '1px solid rgba(124, 58, 237, 0.3)',
-                                                        color: 'primary.light',
+                                                        background: 'rgba(251, 191, 36, 0.15)',
+                                                        border: '1px solid rgba(251, 191, 36, 0.35)',
+                                                        color: '#fbbf24',
                                                         fontSize: '0.7rem',
                                                         fontWeight: 600,
                                                     }}
@@ -245,12 +253,11 @@ export default function Projects() {
                                         </Box>
                                     </Stack>
 
-                                    {/* Role badge */}
                                     <Typography
                                         variant="caption"
                                         sx={{
                                             display: 'block',
-                                            color: 'secondary.light',
+                                            color: '#34d399',
                                             fontWeight: 600,
                                             mb: 1.5,
                                             fontSize: '0.75rem',
@@ -272,7 +279,6 @@ export default function Projects() {
                                         {project.description}
                                     </Typography>
 
-                                    {/* Tags */}
                                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
                                         {project.tags.map((tag) => (
                                             <Chip
@@ -310,7 +316,6 @@ export default function Projects() {
                     ))}
                 </Grid>
 
-                {/* GitHub CTA */}
                 <Box sx={{ textAlign: 'center', mt: 7 }}>
                     <Button
                         id="projects-view-github"

@@ -59,11 +59,11 @@ export default function Header() {
                     elevation={0}
                     sx={{
                         background: scrolled
-                            ? 'rgba(10, 10, 15, 0.85)'
+                            ? 'rgba(11, 15, 26, 0.85)'
                             : 'transparent',
                         backdropFilter: scrolled ? 'blur(20px)' : 'none',
                         borderBottom: scrolled
-                            ? '1px solid rgba(124, 58, 237, 0.15)'
+                            ? '1px solid rgba(59, 130, 246, 0.15)'
                             : 'none',
                         transition: 'all 0.4s ease',
                     }}
@@ -77,11 +77,11 @@ export default function Header() {
                                         width: 36,
                                         height: 36,
                                         borderRadius: '10px',
-                                        background: 'linear-gradient(135deg, #7c3aed, #a855f7)',
+                                        background: 'linear-gradient(135deg, #3b82f6, #10b981)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        boxShadow: '0 4px 12px rgba(124, 58, 237, 0.4)',
+                                        boxShadow: '0 4px 12px rgba(59, 130, 246, 0.4)',
                                     }}
                                 >
                                     <CodeIcon sx={{ fontSize: 20, color: '#fff' }} />
@@ -91,7 +91,7 @@ export default function Header() {
                                     sx={{
                                         fontFamily: '"Space Grotesk", sans-serif',
                                         fontWeight: 700,
-                                        background: 'linear-gradient(90deg, #a78bfa, #67e8f9)',
+                                        background: 'linear-gradient(90deg, #60a5fa, #34d399)',
                                         backgroundClip: 'text',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
@@ -114,7 +114,7 @@ export default function Header() {
                                             px: 2,
                                             '&:hover': {
                                                 color: 'primary.light',
-                                                background: 'rgba(124, 58, 237, 0.08)',
+                                                background: 'rgba(59, 130, 246, 0.08)',
                                             },
                                         }}
                                     >
@@ -154,9 +154,9 @@ export default function Header() {
                 PaperProps={{
                     sx: {
                         width: 280,
-                        background: 'rgba(13, 13, 20, 0.97)',
+                        background: 'rgba(11, 15, 26, 0.97)',
                         backdropFilter: 'blur(20px)',
-                        borderLeft: '1px solid rgba(124, 58, 237, 0.2)',
+                        borderLeft: '1px solid rgba(59, 130, 246, 0.2)',
                         px: 2,
                         pt: 2,
                     },
@@ -180,7 +180,7 @@ export default function Header() {
                                 sx={{
                                     borderRadius: 2,
                                     mb: 0.5,
-                                    '&:hover': { background: 'rgba(124, 58, 237, 0.12)' },
+                                    '&:hover': { background: 'rgba(59, 130, 246, 0.12)' },
                                 }}
                             >
                                 <ListItemText

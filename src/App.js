@@ -12,41 +12,41 @@ const theme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#7c3aed',
-            light: '#a78bfa',
-            dark: '#5b21b6',
+            main: '#3b82f6',
+            light: '#60a5fa',
+            dark: '#2563eb',
         },
         secondary: {
-            main: '#06b6d4',
-            light: '#67e8f9',
-            dark: '#0e7490',
+            main: '#10b981',
+            light: '#34d399',
+            dark: '#059669',
         },
         background: {
-            default: '#0a0a0f',
-            paper: '#13131a',
+            default: '#0b0f1a',
+            paper: '#111827',
         },
         text: {
-            primary: '#f1f5f9',
+            primary: '#f8fafc',
             secondary: '#94a3b8',
         },
     },
     typography: {
-        fontFamily: '"Inter", "Space Grotesk", sans-serif',
+        fontFamily: '"Inter", "JetBrains Mono", "Space Grotesk", sans-serif',
         h1: {
             fontFamily: '"Space Grotesk", sans-serif',
-            fontWeight: 700,
+            fontWeight: 800,
         },
         h2: {
             fontFamily: '"Space Grotesk", sans-serif',
-            fontWeight: 700,
+            fontWeight: 800,
         },
         h3: {
             fontFamily: '"Space Grotesk", sans-serif',
-            fontWeight: 600,
+            fontWeight: 700,
         },
         h4: {
             fontFamily: '"Space Grotesk", sans-serif',
-            fontWeight: 600,
+            fontWeight: 700,
         },
         h5: {
             fontFamily: '"Space Grotesk", sans-serif',
@@ -58,7 +58,7 @@ const theme = createTheme({
         },
     },
     shape: {
-        borderRadius: 16,
+        borderRadius: 14,
     },
     components: {
         MuiButton: {
@@ -68,22 +68,22 @@ const theme = createTheme({
                     fontWeight: 600,
                     letterSpacing: '0.02em',
                     borderRadius: 12,
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
                 },
                 containedPrimary: {
-                    background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
-                    boxShadow: '0 4px 24px rgba(124, 58, 237, 0.35)',
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #10b981 100%)',
+                    boxShadow: '0 6px 24px rgba(59, 130, 246, 0.35)',
                     '&:hover': {
-                        background: 'linear-gradient(135deg, #6d28d9 0%, #9333ea 100%)',
-                        boxShadow: '0 6px 32px rgba(124, 58, 237, 0.5)',
+                        background: 'linear-gradient(135deg, #2563eb 0%, #059669 100%)',
+                        boxShadow: '0 10px 32px rgba(16, 185, 129, 0.45)',
                         transform: 'translateY(-2px)',
                     },
                 },
                 outlinedPrimary: {
-                    borderColor: 'rgba(124, 58, 237, 0.5)',
+                    borderColor: 'rgba(59, 130, 246, 0.5)',
                     '&:hover': {
-                        borderColor: '#7c3aed',
-                        backgroundColor: 'rgba(124, 58, 237, 0.08)',
+                        borderColor: '#60a5fa',
+                        backgroundColor: 'rgba(59, 130, 246, 0.08)',
                         transform: 'translateY(-2px)',
                     },
                 },
@@ -92,14 +92,14 @@ const theme = createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    background: 'rgba(19, 19, 26, 0.8)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(124, 58, 237, 0.12)',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    background: 'rgba(17, 24, 39, 0.7)',
+                    backdropFilter: 'blur(18px)',
+                    border: '1px solid rgba(59, 130, 246, 0.12)',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
-                        border: '1px solid rgba(124, 58, 237, 0.35)',
-                        transform: 'translateY(-6px)',
-                        boxShadow: '0 20px 60px rgba(124, 58, 237, 0.2)',
+                        border: '1px solid rgba(16, 185, 129, 0.35)',
+                        transform: 'translateY(-8px)',
+                        boxShadow: '0 24px 60px rgba(59, 130, 246, 0.18), 0 8px 32px rgba(16, 185, 129, 0.12)',
                     },
                 },
             },

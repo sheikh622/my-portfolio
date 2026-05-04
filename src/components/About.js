@@ -9,29 +9,78 @@ import {
     Chip,
     Stack,
 } from '@mui/material';
+import WebIcon from '@mui/icons-material/Web';
+import StorageIcon from '@mui/icons-material/Storage';
+import CloudIcon from '@mui/icons-material/Cloud';
 import avatar from '../assets/avatar.png';
 
-const skills = [
-    { name: 'React.js / Next.js', level: 95, color: '#61dafb' },
-    { name: 'TypeScript / JavaScript', level: 92, color: '#3178c6' },
-    { name: 'Redux / Zustand / Context API', level: 90, color: '#764abc' },
-    { name: 'REST APIs / GraphQL / WebSockets', level: 88, color: '#e535ab' },
-    { name: 'Material UI / Bootstrap', level: 87, color: '#a78bfa' },
-    { name: 'Git / Docker / Agile', level: 82, color: '#f97316' },
+const skillGroups = [
+    {
+        id: 'frontend',
+        title: 'Frontend',
+        icon: <WebIcon sx={{ fontSize: 22 }} />,
+        color: '#60a5fa',
+        accent: 'rgba(59, 130, 246, 0.15)',
+        skills: [
+            'React.js',
+            'Next.js',
+            'TypeScript',
+            'JavaScript (ES6+)',
+            'Redux / Redux Saga',
+            'Zustand',
+            'Context API',
+            'Material UI',
+            'Tailwind CSS',
+            'Bootstrap',
+            'HTML5 / CSS3',
+        ],
+    },
+    {
+        id: 'backend',
+        title: 'Backend',
+        icon: <StorageIcon sx={{ fontSize: 22 }} />,
+        color: '#34d399',
+        accent: 'rgba(16, 185, 129, 0.15)',
+        skills: [
+            'Node.js',
+            'Express.js',
+            'REST APIs',
+            'GraphQL',
+            'WebSockets',
+            'JWT / OAuth',
+            'MongoDB',
+            'PostgreSQL',
+            'MySQL',
+            'Neo4j',
+            'Parse',
+        ],
+    },
+    {
+        id: 'devops',
+        title: 'DevOps & Cloud',
+        icon: <CloudIcon sx={{ fontSize: 22 }} />,
+        color: '#fbbf24',
+        accent: 'rgba(251, 191, 36, 0.15)',
+        skills: [
+            'AWS (EC2, S3, Lambda)',
+            'Vercel',
+            'Docker',
+            'CI/CD',
+            'Git / GitHub',
+            'Linux',
+            'Nginx',
+            'Agile / Scrum',
+            'Postman',
+            'Jira',
+        ],
+    },
 ];
 
 const stats = [
-    { value: '4+', label: 'Years Experience', color: '#a78bfa' },
-    { value: '10+', label: 'Projects Delivered', color: '#67e8f9' },
-    { value: '2', label: 'Companies Led', color: '#34d399' },
-    { value: '5+', label: 'Domains Covered', color: '#f59e0b' },
-];
-
-const tools = [
-    'React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Redux',
-    'Redux Saga', 'Context API', 'Zustand', 'GraphQL', 'REST APIs',
-    'WebSockets', 'Material UI', 'Bootstrap', 'Reactstrap',
-    'HTML5', 'CSS3', 'Git', 'Docker', 'Agile/Scrum', 'Neo4j', 'Parse',
+    { value: '5', label: 'Years Experience', color: '#60a5fa' },
+    { value: '15+', label: 'Projects Delivered', color: '#34d399' },
+    { value: '2', label: 'Companies Led', color: '#fbbf24' },
+    { value: 'Full', label: 'Stack Coverage', color: '#f472b6' },
 ];
 
 export default function About() {
@@ -44,7 +93,6 @@ export default function About() {
                 overflow: 'hidden',
             }}
         >
-            {/* Background accent */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -52,8 +100,19 @@ export default function About() {
                     right: '-10%',
                     width: '35%',
                     height: '60%',
-                    background: 'radial-gradient(ellipse, rgba(6, 182, 212, 0.07) 0%, transparent 70%)',
+                    background: 'radial-gradient(ellipse, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
                     transform: 'translateY(-50%)',
+                    pointerEvents: 'none',
+                }}
+            />
+            <Box
+                sx={{
+                    position: 'absolute',
+                    bottom: '5%',
+                    left: '-5%',
+                    width: '30%',
+                    height: '40%',
+                    background: 'radial-gradient(ellipse, rgba(59, 130, 246, 0.07) 0%, transparent 70%)',
                     pointerEvents: 'none',
                 }}
             />
@@ -65,7 +124,7 @@ export default function About() {
                         variant="overline"
                         sx={{
                             color: 'primary.light',
-                            letterSpacing: '0.15em',
+                            letterSpacing: '0.18em',
                             fontWeight: 600,
                             mb: 1,
                             display: 'block',
@@ -81,7 +140,7 @@ export default function About() {
                         <Box
                             component="span"
                             sx={{
-                                background: 'linear-gradient(135deg, #a78bfa, #67e8f9)',
+                                background: 'linear-gradient(135deg, #60a5fa, #34d399)',
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -92,10 +151,10 @@ export default function About() {
                     </Typography>
                     <Box
                         sx={{
-                            width: 64,
+                            width: 72,
                             height: 4,
                             borderRadius: 2,
-                            background: 'linear-gradient(90deg, #7c3aed, #06b6d4)',
+                            background: 'linear-gradient(90deg, #3b82f6, #10b981)',
                             mx: 'auto',
                         }}
                     />
@@ -112,44 +171,43 @@ export default function About() {
                                 gap: 3,
                             }}
                         >
-                            {/* Avatar with spinning gradient border */}
                             <Box sx={{ position: 'relative' }}>
                                 <Box
                                     sx={{
                                         position: 'absolute',
-                                        inset: -4,
+                                        inset: -6,
                                         borderRadius: '50%',
-                                        background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
+                                        background:
+                                            'conic-gradient(from 0deg, #3b82f6, #10b981, #fbbf24, #3b82f6)',
                                         zIndex: 0,
-                                        animation: 'rotateBorder 4s linear infinite',
+                                        animation: 'rotateBorder 6s linear infinite',
                                         '@keyframes rotateBorder': {
-                                            from: { filter: 'hue-rotate(0deg)' },
-                                            to: { filter: 'hue-rotate(360deg)' },
+                                            from: { transform: 'rotate(0deg)' },
+                                            to: { transform: 'rotate(360deg)' },
                                         },
                                     }}
                                 />
                                 <Avatar
                                     src={avatar}
-                                    alt="Muhammad Arslan — Senior React Developer"
+                                    alt="Muhammad Arslan — Senior Software Engineer"
                                     sx={{
                                         width: 200,
                                         height: 200,
                                         position: 'relative',
                                         zIndex: 1,
-                                        border: '4px solid #0a0a0f',
+                                        border: '4px solid #0b0f1a',
                                     }}
                                 />
                             </Box>
 
-                            {/* Stats Grid */}
                             <Grid container spacing={1.5} sx={{ width: '100%' }}>
                                 {stats.map((stat) => (
                                     <Grid item xs={6} key={stat.label}>
                                         <Card
                                             sx={{
                                                 textAlign: 'center',
-                                                p: 1.5,
-                                                background: 'rgba(19, 19, 26, 0.8)',
+                                                p: 1.75,
+                                                background: 'rgba(17, 24, 39, 0.7)',
                                                 border: '1px solid rgba(255,255,255,0.06)',
                                             }}
                                         >
@@ -172,34 +230,40 @@ export default function About() {
                         </Box>
                     </Grid>
 
-                    {/* Right: Bio + Skills */}
+                    {/* Right: Bio + Skill Groups */}
                     <Grid item xs={12} md={8}>
                         <Stack spacing={4}>
-                            {/* Bio */}
                             <Box>
                                 <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, lineHeight: 1.3 }}>
-                                    Senior Frontend Engineer crafting production-grade web experiences
+                                    Senior Software Engineer building end-to-end web platforms
                                 </Typography>
                                 <Typography
                                     variant="body1"
                                     sx={{ color: 'text.secondary', lineHeight: 1.9, mb: 2, fontSize: '1.05rem' }}
                                 >
-                                    I'm a Senior React Developer with 4+ years of hands-on experience building
-                                    scalable, high-performance web applications. I specialise in{' '}
+                                    I'm a Full Stack Developer with{' '}
+                                    <Box component="span" sx={{ color: '#fbbf24', fontWeight: 600 }}>
+                                        5 years
+                                    </Box>{' '}
+                                    of hands-on experience building scalable web applications. I work across the stack
+                                    — designing{' '}
                                     <Box component="span" sx={{ color: 'primary.light', fontWeight: 600 }}>
-                                        React.js, Next.js, and TypeScript
-                                    </Box>
-                                    , with deep expertise in state management (Redux, Zustand, Context API),
-                                    REST & GraphQL API integration, and WebSocket-driven real-time features.
+                                        React & Next.js
+                                    </Box>{' '}
+                                    interfaces, building{' '}
+                                    <Box component="span" sx={{ color: '#34d399', fontWeight: 600 }}>
+                                        Node.js & Express
+                                    </Box>{' '}
+                                    APIs, modeling data in MongoDB and PostgreSQL, and shipping to AWS and Vercel.
                                 </Typography>
                                 <Typography
                                     variant="body1"
                                     sx={{ color: 'text.secondary', lineHeight: 1.9, mb: 2, fontSize: '1.05rem' }}
                                 >
-                                    I've led and contributed to frontend development across diverse domains —
-                                    education management, AI-driven platforms, healthcare, and marketplace
-                                    solutions — always with a commitment to{' '}
-                                    <Box component="span" sx={{ color: 'secondary.light', fontWeight: 600 }}>
+                                    I've led and contributed to products across diverse domains — education
+                                    management, AI-driven platforms, healthcare, and marketplaces — always with a
+                                    commitment to{' '}
+                                    <Box component="span" sx={{ color: '#34d399', fontWeight: 600 }}>
                                         clean architecture, reusable components, and pixel-perfect UI
                                     </Box>
                                     .
@@ -209,90 +273,93 @@ export default function About() {
                                     sx={{ color: 'text.secondary', lineHeight: 1.9, fontSize: '1.05rem' }}
                                 >
                                     Beyond writing code, I bring leadership, Agile collaboration, and a
-                                    product-minded approach — ensuring every solution is easy to scale,
-                                    maintain, and extend. Based in Lahore, Pakistan, open to remote opportunities worldwide.
+                                    product-minded approach — ensuring every solution is easy to scale, maintain,
+                                    and extend. Based in Lahore, Pakistan, open to remote opportunities worldwide.
                                 </Typography>
                             </Box>
 
-                            {/* Skill Bars */}
+                            {/* Skill Groups */}
                             <Box>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2.5 }}>
-                                    Core Proficiencies
+                                    Tech Stack
                                 </Typography>
-                                <Stack spacing={2}>
-                                    {skills.map((skill) => (
-                                        <Box key={skill.name}>
-                                            <Box
+                                <Grid container spacing={2}>
+                                    {skillGroups.map((group) => (
+                                        <Grid item xs={12} sm={6} md={4} key={group.id}>
+                                            <Card
+                                                id={`skill-group-${group.id}`}
                                                 sx={{
-                                                    display: 'flex',
-                                                    justifyContent: 'space-between',
-                                                    mb: 0.75,
-                                                }}
-                                            >
-                                                <Typography
-                                                    variant="body2"
-                                                    sx={{ fontWeight: 600, color: 'text.primary' }}
-                                                >
-                                                    {skill.name}
-                                                </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    sx={{ color: skill.color, fontWeight: 700 }}
-                                                >
-                                                    {skill.level}%
-                                                </Typography>
-                                            </Box>
-                                            <Box
-                                                sx={{
-                                                    height: 6,
-                                                    borderRadius: 3,
-                                                    background: 'rgba(255,255,255,0.06)',
-                                                    overflow: 'hidden',
+                                                    p: 2.5,
+                                                    height: '100%',
+                                                    background: 'rgba(17, 24, 39, 0.6)',
+                                                    border: `1px solid ${group.color}22`,
+                                                    transition: 'all 0.35s ease',
+                                                    '&:hover': {
+                                                        border: `1px solid ${group.color}66`,
+                                                        boxShadow: `0 16px 40px ${group.color}22`,
+                                                        transform: 'translateY(-6px)',
+                                                    },
                                                 }}
                                             >
                                                 <Box
                                                     sx={{
-                                                        height: '100%',
-                                                        width: skill.level + '%',
-                                                        borderRadius: 3,
-                                                        background: skill.color + '88',
-                                                        boxShadow: '0 0 8px ' + skill.color + '66',
-                                                        transition: 'width 1.5s ease',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: 1.25,
+                                                        mb: 2,
                                                     }}
-                                                />
-                                            </Box>
-                                        </Box>
+                                                >
+                                                    <Box
+                                                        sx={{
+                                                            width: 40,
+                                                            height: 40,
+                                                            borderRadius: '10px',
+                                                            background: group.accent,
+                                                            color: group.color,
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            justifyContent: 'center',
+                                                        }}
+                                                    >
+                                                        {group.icon}
+                                                    </Box>
+                                                    <Typography
+                                                        variant="subtitle1"
+                                                        sx={{
+                                                            fontWeight: 700,
+                                                            color: group.color,
+                                                            letterSpacing: '0.02em',
+                                                        }}
+                                                    >
+                                                        {group.title}
+                                                    </Typography>
+                                                </Box>
+                                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
+                                                    {group.skills.map((skill) => (
+                                                        <Chip
+                                                            key={skill}
+                                                            label={skill}
+                                                            size="small"
+                                                            sx={{
+                                                                background: 'rgba(255,255,255,0.04)',
+                                                                border: '1px solid rgba(255,255,255,0.06)',
+                                                                color: 'text.secondary',
+                                                                fontSize: '0.72rem',
+                                                                fontWeight: 500,
+                                                                transition: 'all 0.2s ease',
+                                                                '&:hover': {
+                                                                    background: group.accent,
+                                                                    color: group.color,
+                                                                    borderColor: `${group.color}55`,
+                                                                },
+                                                            }}
+                                                        />
+                                                    ))}
+                                                </Box>
+                                            </Card>
+                                        </Grid>
                                     ))}
-                                </Stack>
-                            </Box>
-
-                            {/* Tools */}
-                            <Box>
-                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Tools & Technologies
-                                </Typography>
-                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                                    {tools.map((tool) => (
-                                        <Chip
-                                            key={tool}
-                                            label={tool}
-                                            size="small"
-                                            sx={{
-                                                background: 'rgba(124, 58, 237, 0.08)',
-                                                border: '1px solid rgba(124, 58, 237, 0.18)',
-                                                color: 'text.secondary',
-                                                fontWeight: 500,
-                                                transition: 'all 0.2s ease',
-                                                '&:hover': {
-                                                    background: 'rgba(124, 58, 237, 0.18)',
-                                                    color: 'primary.light',
-                                                    borderColor: 'rgba(124, 58, 237, 0.4)',
-                                                    transform: 'translateY(-2px)',
-                                                },
-                                            }}
-                                        />
-                                    ))}
-                                </Box>
+                                </Grid>
                             </Box>
                         </Stack>
                     </Grid>
