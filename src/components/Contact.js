@@ -64,6 +64,14 @@ export default function Contact() {
             setSnackbar({ open: true, message: 'Please fill in all required fields.', severity: 'warning' });
             return;
         }
+        if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+            setSnackbar({
+                open: true,
+                message: 'Email service is not configured. Please email me directly at arslansaleem622@gmail.com.',
+                severity: 'error',
+            });
+            return;
+        }
         setLoading(true);
         emailjs
             .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, { publicKey: EMAILJS_PUBLIC_KEY })
@@ -72,9 +80,16 @@ export default function Contact() {
                 setFormData({ name: '', email: '', subject: '', message: '' });
                 setSnackbar({ open: true, message: "Message sent! I'll get back to you soon 🚀", severity: 'success' });
             })
-            .catch(() => {
+            .catch((error) => {
                 setLoading(false);
-                setSnackbar({ open: true, message: 'Oops! Something went wrong. Please try again.', severity: 'error' });
+                console.error('[EmailJS] sendForm failed:', error);
+                const detail =
+                    error?.text || error?.message || (typeof error === 'string' ? error : 'Unknown error');
+                setSnackbar({
+                    open: true,
+                    message: `Couldn't send: ${detail}. You can also email me directly at arslansaleem622@gmail.com.`,
+                    severity: 'error',
+                });
             });
     };
 
