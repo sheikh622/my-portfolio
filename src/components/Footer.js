@@ -24,7 +24,7 @@ const footerLinks = [
 ];
 
 const socials = [
-    { icon: <GitHubIcon />, href: 'https://github.com/sheikh622', label: 'GitHub' },
+    { icon: <GitHubIcon />, href: 'https://github.com/arslanmuhammad-dev', label: 'GitHub' },
     { icon: <LinkedInIcon />, href: 'https://linkedin.com/in/muhammad-arslan-0624971b5', label: 'LinkedIn' },
     { icon: <EmailIcon />, href: 'mailto:arslansaleem622@gmail.com', label: 'Email' },
 ];

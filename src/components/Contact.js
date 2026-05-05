@@ -41,7 +41,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-    { icon: <GitHubIcon />, href: 'https://github.com/sheikh622', label: 'GitHub', color: '#e2e8f0' },
+    { icon: <GitHubIcon />, href: 'https://github.com/arslanmuhammad-dev', label: 'GitHub', color: '#e2e8f0' },
     { icon: <LinkedInIcon />, href: 'https://linkedin.com/in/muhammad-arslan-0624971b5', label: 'LinkedIn', color: '#0A66C2' },
     { icon: <EmailIcon />, href: 'mailto:arslansaleem622@gmail.com', label: 'Email', color: '#60a5fa' },
 ];

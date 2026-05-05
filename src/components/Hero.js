@@ -22,7 +22,7 @@ const socialLinks = [
     },
     {
         icon: <GitHubIcon />,
-        href: 'https://github.com/sheikh622',
+        href: 'https://github.com/arslanmuhammad-dev',
         label: 'GitHub',
     },
     {

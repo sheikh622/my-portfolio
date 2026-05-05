@@ -366,7 +366,7 @@ export default function Projects() {
                         color="primary"
                         size="large"
                         startIcon={<GitHubIcon />}
-                        href="https://github.com/sheikh622"
+                        href="https://github.com/arslanmuhammad-dev"
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{ px: 5, py: 1.5 }}
