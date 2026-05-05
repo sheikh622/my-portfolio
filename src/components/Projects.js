@@ -75,6 +75,19 @@ const projects = [
         role: 'Full Stack Developer',
         featured: false,
     },
+    {
+        id: 'project-personal-fullstack',
+        title: 'Personal Project',
+        description:
+            'A self-built fullstack productivity app showcasing modern web development end-to-end: secure JWT authentication, type-safe Drizzle ORM database access, kanban-style task board with Server Actions, and a streaming AI assistant powered by the Vercel AI SDK that has full context on the user’s tasks.',
+        tags: ['Next.js 16', 'TypeScript', 'Drizzle ORM', 'Tailwind CSS', 'Vercel AI SDK', 'JWT Auth'],
+        category: 'AI / Tech',
+        gradient: 'linear-gradient(135deg, #818cf8 0%, #34d399 100%)',
+        role: 'Solo Builder · Fullstack',
+        featured: true,
+        liveUrl: 'https://my-fullstack.vercel.app',
+        githubUrl: 'https://github.com/arslanmuhammad-dev/my-fullstack',
+    },
 ];
 
 export default function Projects() {
@@ -298,18 +311,48 @@ export default function Projects() {
                                 </CardContent>
 
                                 <CardActions sx={{ px: 2, pb: 2, pt: 0, gap: 1 }}>
-                                    <Button
-                                        id={`${project.id}-details`}
-                                        size="small"
-                                        variant="contained"
-                                        endIcon={<OpenInNewIcon />}
-                                        onClick={() =>
-                                            document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-                                        }
-                                        sx={{ ml: 'auto !important', px: 2.5 }}
-                                    >
-                                        Learn More
-                                    </Button>
+                                    {project.githubUrl && (
+                                        <Button
+                                            id={`${project.id}-github`}
+                                            size="small"
+                                            variant="outlined"
+                                            color="primary"
+                                            startIcon={<GitHubIcon />}
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            sx={{ px: 2 }}
+                                        >
+                                            Code
+                                        </Button>
+                                    )}
+                                    {project.liveUrl ? (
+                                        <Button
+                                            id={`${project.id}-live`}
+                                            size="small"
+                                            variant="contained"
+                                            endIcon={<OpenInNewIcon />}
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            sx={{ ml: 'auto !important', px: 2.5 }}
+                                        >
+                                            Live Demo
+                                        </Button>
+                                    ) : (
+                                        <Button
+                                            id={`${project.id}-details`}
+                                            size="small"
+                                            variant="contained"
+                                            endIcon={<OpenInNewIcon />}
+                                            onClick={() =>
+                                                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+                                            }
+                                            sx={{ ml: 'auto !important', px: 2.5 }}
+                                        >
+                                            Learn More
+                                        </Button>
+                                    )}
                                 </CardActions>
                             </Card>
                         </Grid>
